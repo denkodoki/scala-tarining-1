@@ -6,7 +6,7 @@ object S02DefineVariables {
   
 	val s: String = "Hi"                      //> s  : String = Hi
    
-  var n = 3                                       //> n  : Int = 3
+  var n: Int = 3                                  //> n  : Int = 3
   
   // semicolon infrence
   

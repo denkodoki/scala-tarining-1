@@ -32,5 +32,4 @@ object S01traits {
   val q4 = new DoublingIncreasingQueue            //> q4  : traits.DoublingIncreasingQueue = FifoQueue()
   q4 put 3
   q4                                              //> res7: traits.DoublingIncreasingQueue = FifoQueue(4)
-  
 }

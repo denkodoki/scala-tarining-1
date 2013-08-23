@@ -1,12 +1,12 @@
 package basic
 
-object S02DefineVariables {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(90); 
+object S02DefineVariables {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(93); 
 
   // define variables
   
-	val s: String = "Hi";System.out.println("""s  : String = """ + $show(s ));$skip(16); 
+	val s: String = "Hi";System.out.println("""s  : String = """ + $show(s ));$skip(22); 
    
-  var n = 3;System.out.println("""n  : Int = """ + $show(n ));$skip(54); 
+  var n: Int = 3;System.out.println("""n  : Int = """ + $show(n ));$skip(56); 
   
   // semicolon infrence
   
