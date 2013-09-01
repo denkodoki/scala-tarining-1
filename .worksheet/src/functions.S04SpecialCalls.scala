@@ -17,7 +17,8 @@ object S04SpecialCalls {;import org.scalaide.worksheet.runtime.library.Worksheet
    */
   def speed(distance: Double, time: Double) = distance / time;System.out.println("""speed: (distance: Double, time: Double)Double""");$skip(35); val res$0 = 
   speed(time = 45, distance = 100);System.out.println("""res0: Double = """ + $show(res$0));$skip(24); val res$1 = 
-  speed(100, time = 45);System.out.println("""res1: Double = """ + $show(res$1));$skip(123); 
+  speed(100, time = 45);System.out.println("""res1: Double = """ + $show(res$1));$skip(151); 
+  //? speed(time = 45, 100)
 
   /*
    Default parameter values
@@ -32,12 +33,15 @@ object S04SpecialCalls {;import org.scalaide.worksheet.runtime.library.Worksheet
 
   def boom(x: Int): Int =
     if (x == 0) throw new Exception("boom!")
-    else boom(x - 1) + 1;System.out.println("""boom: (x: Int)Int""");$skip(100); 
+    else boom(x - 1) + 1;System.out.println("""boom: (x: Int)Int""");$skip(174); 
+    // not tail recusive: the recursive call is not the last action
+    
     
 
   def bang(x: Int): Int =
     if (x == 0) throw new Exception("bang!")
     else bang(x - 1);System.out.println("""bang: (x: Int)Int""")}
+    // the recursive call is he last action
     
  // boom(3)
  // bang(3)

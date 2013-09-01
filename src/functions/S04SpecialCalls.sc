@@ -20,6 +20,7 @@ object S04SpecialCalls {
                                                   //> speed: (distance: Double, time: Double)Double
   speed(time = 45, distance = 100)                //> res0: Double = 2.2222222222222223
   speed(100, time = 45)                           //> res1: Double = 2.2222222222222223
+  //? speed(time = 45, 100)
 
   /*
    Default parameter values
@@ -36,11 +37,14 @@ object S04SpecialCalls {
   def boom(x: Int): Int =
     if (x == 0) throw new Exception("boom!")
     else boom(x - 1) + 1                          //> boom: (x: Int)Int
+    // not tail recusive: the recursive call is not the last action
+    
     
 
   def bang(x: Int): Int =
     if (x == 0) throw new Exception("bang!")
     else bang(x - 1)                              //> bang: (x: Int)Int
+    // the recursive call is he last action
     
  // boom(3)
  // bang(3)
