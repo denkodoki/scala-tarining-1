@@ -15,4 +15,11 @@ object S01Checksum {
   }                                               //> checksum: (s: String)Int
   checksum("bamlamber")                           //> res0: Int = -163
   checksum("Ugachacka")                           //> res1: Int = -120
+  
+ // type hierarchiy
+ 
+ // nothing
+  
+ // initialization, type parameters
+ 
 }

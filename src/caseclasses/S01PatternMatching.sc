@@ -11,7 +11,7 @@ object S01PatternMatching {
     case true => "truth"
     case "hello" => "hi!"
     case Nil => "the empty list"
-    case _ => "something else"
+    case _ => "something else" // wildcard
   }                                               //> describe: (x: Any)String
 
   describe((1, 2))                                //> res0: String = something else

@@ -10,7 +10,7 @@ object S03Operators {
   
   1 + 2 == 1.+(2)                                 //> res1: Boolean = true
   
-  val s = "Sors bona nilhil aliud!"               //> s  : String = Sors bona nilhil aliud!
+  val s = "Sors bona nihil aliud!"                //> s  : String = Sors bona nihil aliud!
   
   s indexOf ('o', 3) == s.indexOf('o', 3)         //> res2: Int = -1
   

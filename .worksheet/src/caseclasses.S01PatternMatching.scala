@@ -2,7 +2,7 @@ package caseclasses
 
 object S01PatternMatching {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(81); 
 
-  println("Pattern matching");$skip(227); 
+  println("Pattern matching");$skip(239); 
 
   // Constant patterns and the wildcard pattern
 
@@ -11,7 +11,7 @@ object S01PatternMatching {;import org.scalaide.worksheet.runtime.library.Worksh
     case true => "truth"
     case "hello" => "hi!"
     case Nil => "the empty list"
-    case _ => "something else"
+    case _ => "something else" // wildcard
   };System.out.println("""describe: (x: Any)String""");$skip(21); val res$0 = 
 
   describe((1, 2))
