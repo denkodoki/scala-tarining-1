@@ -48,8 +48,10 @@ object S03Loops {
                                                   
   def prt2(prefix:String ) = (s:String) => println(prefix+s)
                                                   //> prt2: (prefix: String)String => Unit
-  args.foreach(prt2("arg: "))                     //> arg: Hello
-                                                  //| arg: Haliho
-                                                  //| arg: Hi
+  val prt3: Function1[String, Unit] = prt2("Detto: ")
+                                                  //> prt3  : String => Unit = <function1>
+  args.foreach(prt3)                              //> Detto: Hello
+                                                  //| Detto: Haliho
+                                                  //| Detto: Hi
   
 }

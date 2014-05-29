@@ -9,8 +9,8 @@ object S04SpecialCalls {;import org.scalaide.worksheet.runtime.library.Worksheet
   def echo(args: String*) = args foreach println;System.out.println("""echo: (args: String*)Unit""");$skip(19); 
   echo("AC", "DC");$skip(33); 
 
-  val acdc = Array("AC", "DC");System.out.println("""acdc  : Array[String] = """ + $show(acdc ));$skip(112); 
-  //? echo(acdc)
+  val acdc = Array("AC", "DC");System.out.println("""acdc  : Array[String] = """ + $show(acdc ));$skip(113); 
+  // ? echo(acdc)
 
   /*
    Named parameters

@@ -18,7 +18,7 @@ object S03Operators {
   
   val d = -2.0                                    //> d  : Double = -2.0
   
-  (-2.0) == ((2.0).unary_-) == ((2.0) unary_-)    //> res3: Boolean = false
+  (-2.0) == ((2.0).unary_-)                       //> res3: Boolean = true
   
   // postfix
   
@@ -55,9 +55,10 @@ object S03Operators {
   val eight = new Funy(8.0)                       //> eight  : classes.Funy = Funy(8.0)
   val four =new  Funy(4.0)                        //> four  : classes.Funy = Funy(4.0)
   eight */ four                                   //> res11: classes.Funy = Funy(2.0)
-  eight */ four == eight.*/(four)                 //> res12: Boolean = false
+  eight.*/(four)                                  //> res12: classes.Funy = Funy(2.0)
   eight *: four                                   //> res13: classes.Funy = Funy(0.5)
-  eight *: four == four.*:(eight)                 //> res14: Boolean = false
+  four.*:( eight)                                 //> res14: classes.Funy = Funy(0.5)
+  eight :* four                                   //> res15: classes.Funy = Funy(-2.0)
 }
 
 class Funy(val i: Double) {
@@ -66,5 +67,6 @@ class Funy(val i: Double) {
   def *=(other: Funy) = new Funy(this.i * other.i)
   def */(other: Funy) = new Funy(this.i / other.i)
   def *:(other: Funy) = new Funy(this.i / other.i)
+  def :*(other: Funy) = new Funy(-1*(this.i / other.i))
   override def toString = s"Funy($i)"
 }

@@ -11,7 +11,7 @@ object S04SpecialCalls {
                                                   //| DC
 
   val acdc = Array("AC", "DC")                    //> acdc  : Array[String] = Array(AC, DC)
-  //? echo(acdc)
+  // ? echo(acdc)
 
   /*
    Named parameters

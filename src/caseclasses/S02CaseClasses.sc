@@ -42,4 +42,15 @@ object S02CaseClasses {
   matchList("A" :: "B" :: "C" :: Nil)             //> res7: String = Three elemnts, first is A
   matchList(List(1, 2, 3, 4))                     //> res8: String = At least four elements: 1 :: List(2, 3, 4)
   
+  def matchList2(e: List[_]) = e match {
+  	case Nil => "it's Nil"
+  	case x :: Nil => "single " + x
+  	case head :: tail => s"at least tow element: $head :: $tail"
+  }                                               //> matchList2: (e: List[_])String
+  
+  matchList2(Nil)                                 //> res9: String = it's Nil
+  matchList2(List(1))                             //> res10: String = single 1
+  matchList2(List("a","b"))                       //> res11: String = at least tow element: a :: List(b)
+  matchList2(List(1,2,3))                         //> res12: String = at least tow element: 1 :: List(2, 3)
+  
 }

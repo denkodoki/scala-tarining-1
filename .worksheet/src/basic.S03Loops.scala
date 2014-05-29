@@ -30,7 +30,8 @@ object S03Loops {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
   val prt = (s:String) => println(s);System.out.println("""prt  : String => Unit = """ + $show(prt ));$skip(20); 
   args.foreach(prt);$skip(113); 
                                                   
-  def prt2(prefix:String ) = (s:String) => println(prefix+s);System.out.println("""prt2: (prefix: String)String => Unit""");$skip(30); 
-  args.foreach(prt2("arg: "))}
+  def prt2(prefix:String ) = (s:String) => println(prefix+s);System.out.println("""prt2: (prefix: String)String => Unit""");$skip(54); 
+  val prt3: Function1[String, Unit] = prt2("Detto: ");System.out.println("""prt3  : String => Unit = """ + $show(prt3 ));$skip(21); 
+  args.foreach(prt3)}
   
 }

@@ -16,9 +16,9 @@ object S03Operators {;import org.scalaide.worksheet.runtime.library.WorksheetSup
   
   // prefix  +-!~
   
-  val d = -2.0;System.out.println("""d  : Double = """ + $show(d ));$skip(51); val res$3 = 
+  val d = -2.0;System.out.println("""d  : Double = """ + $show(d ));$skip(32); val res$3 = 
   
-  (-2.0) == ((2.0).unary_-) == ((2.0) unary_-);System.out.println("""res3: Boolean = """ + $show(res$3));$skip(56); val res$4 = 
+  (-2.0) == ((2.0).unary_-);System.out.println("""res3: Boolean = """ + $show(res$3));$skip(56); val res$4 = 
   
   // postfix
   
@@ -54,10 +54,11 @@ object S03Operators {;import org.scalaide.worksheet.runtime.library.WorksheetSup
   
   val eight = new Funy(8.0);System.out.println("""eight  : classes.Funy = """ + $show(eight ));$skip(27); 
   val four =new  Funy(4.0);System.out.println("""four  : classes.Funy = """ + $show(four ));$skip(16); val res$11 = 
-  eight */ four;System.out.println("""res11: classes.Funy = """ + $show(res$11));$skip(34); val res$12 = 
-  eight */ four == eight.*/(four);System.out.println("""res12: Boolean = """ + $show(res$12));$skip(16); val res$13 = 
-  eight *: four;System.out.println("""res13: classes.Funy = """ + $show(res$13));$skip(34); val res$14 = 
-  eight *: four == four.*:(eight);System.out.println("""res14: Boolean = """ + $show(res$14))}
+  eight */ four;System.out.println("""res11: classes.Funy = """ + $show(res$11));$skip(17); val res$12 = 
+  eight.*/(four);System.out.println("""res12: classes.Funy = """ + $show(res$12));$skip(16); val res$13 = 
+  eight *: four;System.out.println("""res13: classes.Funy = """ + $show(res$13));$skip(18); val res$14 = 
+  four.*:( eight);System.out.println("""res14: classes.Funy = """ + $show(res$14));$skip(16); val res$15 = 
+  eight :* four;System.out.println("""res15: classes.Funy = """ + $show(res$15))}
 }
 
 class Funy(val i: Double) {
@@ -66,5 +67,6 @@ class Funy(val i: Double) {
   def *=(other: Funy) = new Funy(this.i * other.i)
   def */(other: Funy) = new Funy(this.i / other.i)
   def *:(other: Funy) = new Funy(this.i / other.i)
+  def :*(other: Funy) = new Funy(-1*(this.i / other.i))
   override def toString = s"Funy($i)"
 }
